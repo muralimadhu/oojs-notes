@@ -1,2 +1,2 @@
-# oojs-notes
-Principles of Object Oriented Javascript - Notes
+## Notes on Object Oriented JavaScript
+JavaScript is an extremely powerful but often not fully understood language. The world is moving from a client-server model towards a more client - less server model, and the little server side code that is written these days is also likely to have some flavor of javascript. Hence, its more important than ever to understand all of its features completely. One part of javascript that is often ignored is its object oriented features. Its ignored because in a traditional web application, you can often get away with writing procedural js code. But I have found that the more you understand oojs, the better your js development skills get. These are my notes from reading various books on Object Oriented JavaScript, organized by chapters. 
