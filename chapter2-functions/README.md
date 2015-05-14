@@ -120,21 +120,21 @@
     sayNameForAll();        // outputs "Michael"
   ```
 * #### Three ways to change the value of `this`
-  ```javascript
-    var fun = function(input){console.log(this.name + input)};
-    var obj1 = {
-      name: "obj1"
-    }
-    var obj2 = {
-      name: "obj2"
-    }
-    console.log(fun()) //undefined
-  ```
-  * call()
+  * ```javascript
+       var fun = function(input){console.log(this.name + input)};
+       var obj1 = {
+        name: "obj1"
+       }
+       var obj2 = {
+        name: "obj2"
+       }
+       console.log(fun()) //undefined
+    ```
+ * call()
     `console.log(fun.call(obj1,"first"))` //obj1first
-  * apply()
+ * apply()
     `console.log(fun.apply(obj1,['second']))` //obj1second
-  * bind() - Introduced in ECMAScript 5
+ * bind() - Introduced in ECMAScript 5
     ```javascript
       first = fun.bind(obj1,"first")
       second = fun.bind(obj2, "second")
