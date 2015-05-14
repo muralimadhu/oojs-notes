@@ -40,7 +40,7 @@
           };
         }
         alert(foo()); //3 //only the var bar = undefined is hoisted. anonymous functions are not hoisted
-        ```
+      ```
       ```javascript
         alert(foo());
         function foo(){
@@ -52,7 +52,7 @@
               return 8;
           };
         } //3 //only the function foo is hoisted
-        ```
+      ```
       ```javascript
         function foo(){
           return bar();
@@ -64,7 +64,7 @@
           };
         }
         alert(foo()); //TypeError: bar is not a function // notice that the error is not 'bar is not defined'. bar is hoisted, but the function is not
-        ```
+       ```
 * Functions are objects, so they can be passed along, returned, and used pretty much like any other object.
 * Functions can be called with any number of arguments.The arguments object is avilable inside any function to access the arguments. The number of arguments that the function actually expects(arity) is available through function.length
   ```javascript
@@ -85,7 +85,7 @@
     console.log(sum());             // 0
     console.log(sum.length) // 1
   ```
-* No function overloading in javascript because there are no function signatures(functions can accept any number of arguments). 
+* No function overloading in javascript because there are no function signatures(functions can accept any number of arguments).
   ```javascript
    funtion f1(a){
      console.log(a);
