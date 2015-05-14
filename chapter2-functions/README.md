@@ -5,18 +5,19 @@
 
 * #### Two types of functions  
   * Function declaration
-    * ```javascript
-    function sayHello(name){console.log(name)}
+  * 
+    ```javascript
+     function sayHello(name){console.log(name)}
     ```
     * Can be used before its declared because function is hoisted in the context
     
   * Function expression/anonymous functions
-    * ```javascript
+    ```javascript
     var sayHello = function(name){console.log(name)}
     ```
     * Cannot be used before its declared, because function is not hoised in the context (either global or function scope)  
   
-    * ```javascript
+    ```javascript
         function foo(){
           function bar() {
               return 3;
@@ -119,8 +120,9 @@
     person2.sayName();      // outputs "Greg"
     sayNameForAll();        // outputs "Michael"
   ```
-* #### Three ways to change the value of `this`
-  * ```javascript
+  
+#### Three ways to change the value of `this`
+  ```javascript
        var fun = function(input){console.log(this.name + input)};
        var obj1 = {
         name: "obj1"
@@ -130,11 +132,14 @@
        }
        console.log(fun()) //undefined
     ```
- * call()
+    
+* call()
     `console.log(fun.call(obj1,"first"))` //obj1first
- * apply()
+
+* apply()
     `console.log(fun.apply(obj1,['second']))` //obj1second
- * bind() - Introduced in ECMAScript 5
+
+* bind() - Introduced in ECMAScript 5
     ```javascript
       first = fun.bind(obj1,"first")
       second = fun.bind(obj2, "second")
