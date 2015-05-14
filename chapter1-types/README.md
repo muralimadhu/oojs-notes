@@ -1,6 +1,8 @@
-Two types in javascript - **primitive types** and **reference types** 
+#### Types
 
-##### Primitive types: string, number, boolean, null, undefined
+* Two types in javascript - **primitive types** and **reference types** 
+
+* ##### Primitive types: string, number, boolean, null, undefined
   * ```javascript
   //number
   var num1 = 12;
@@ -43,7 +45,7 @@ Two types in javascript - **primitive types** and **reference types**
   ```
 
 
-##### Reference types: Array, Function, Object, Error, Regexp, Date
+* ##### Reference types: Array, Function, Object, Error, Regexp, Date
   * variables contain memory location of object instance
   ```javascript
   var obj1 = new Object();
@@ -75,7 +77,7 @@ Two types in javascript - **primitive types** and **reference types**
   ```
 
 
-##### Gotchas
+* ##### Gotchas
   * Using literals instead of  `new` calls the same code but doesnt call the `new Object()` constructor
 
   * ```javascript 
