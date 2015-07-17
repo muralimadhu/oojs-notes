@@ -15,9 +15,9 @@
   var something = null; //only value 
   //undefined
   var something = undefined;//only value
-  var anotherThing; //automatically assigned undefined
+  var anotherThing; //automatically assigned undefined 
   ```
-  
+
   * value copied into variables
   ```javascript
   var m1 = "hello";
@@ -80,11 +80,10 @@
 
 * ##### Gotchas
   * Using literals instead of  `new` calls the same code but doesnt call the `new Object()` constructor
-
-  * ```javascript 
+  ```javascript 
       var x = null;
       console.log(typeof x); //object
       console.log(x === null); //true
       console.log(x == undefined)//true
       console.log(x === undefined)//false
-    ``` 
+  ``` 
