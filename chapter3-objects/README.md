@@ -4,8 +4,6 @@
 * When a property on an object is first created, an internal method [[Put]] is called. This creates memory for the property and creates an `own property` on this object. This means, the property can only be accessed through an instance of this object  
 
 * When the value of a property changes, [[Set]] is called. 
-
-* 
 ```javascript
  var person = {}
  person.name = "John" // [[Put]]name
