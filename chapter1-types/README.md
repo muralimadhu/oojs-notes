@@ -3,7 +3,7 @@
 * Two types in javascript - **primitive types** and **reference types** 
 
 * ##### Primitive types: string, number, boolean, null, undefined
-  * ```javascript
+  ```javascript
   //number
   var num1 = 12;
   var num2 = 12.5;
@@ -15,9 +15,11 @@
   var something = null; //only value 
   //undefined
   var something = undefined;//only value
-  var anotherThing; //automatically assigned undefined
+  var anotherThing; //automatically assigned undefined 
   ```
+
   * value copied into variables
+  
   ```javascript
   var m1 = "hello";
   var m2 = m1;
