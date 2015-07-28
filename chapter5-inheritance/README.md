@@ -20,7 +20,7 @@ Object.prototype.toString = function(){
 person = {name: "Hello"}; 
 person.toString(); // Dont do this
 ```
-* The simplest form of inheritance is Object Inheritance. When creating the object, specify the prototype ([[Prototype]] property). This is by default set to `Object.prototype`
+* The simplest form of inheritance is Object Inheritance. When creating the object, specify the prototype (`[[Prototype]]` property). This is by default set to `Object.prototype`
 ```javascript
  var person = Object.create(Object.prototype, {name: {value: "Madhu"}, sayName: {}});
  // is equivalent to saying
@@ -103,3 +103,22 @@ Square.prototype = Object.create(Rectangle.prototype, {
 });
 ```
 *  [See Relationship between Square and Rectangle](https://github.com/muralimadhu/oojs-notes/tree/master/chapter5-inheritance/Inheritance.jpeg)
+
+* Inorder to inherit supertype properties or call supertype methods, use call/bind
+
+```javascript
+function Rectangle(length, width) {
+      this.length = length;
+      this.width = width;
+  }
+function Square(size){
+  Rectangle.call(this, size, size)
+}
+Rectangle.prototype.toString = function(){
+  return "Rectangle"
+}
+Square.prototype.toString = function() {
+      var text = Rectangle.prototype.toString.call(this);
+      return text.replace("Rectangle", "Square");
+  };
+```
