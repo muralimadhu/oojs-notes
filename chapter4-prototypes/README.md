@@ -1,11 +1,14 @@
 #### Prototypes
-* Constructors contain common logic that you want all your instances to have. Start with a capital letter to different them from functions
+* Constructors is a function used to create objects with the `new` keyword. Start with a capital letter to different them from functions. All objects created using a constructor have the same methods and properties as the constructor
 ```javascript
 function Person(name){
   this.name = name;
+  this.sayName = function(){
+    console.log(this.name);
+  }
 }
 p = new Person("Madhu");
-console.log(p.name); // Madhu
+console.log(p.sayName()); // Madhu
 console.log(p.constructor == Person); // true
 console.log(p instanceof Person); // true
 ```
@@ -19,14 +22,14 @@ console.log(p instanceof Person) // false
 console.log(p.name); // undefined
 console.log(name); // Madhu
 ```
-* Proptypes are like classes in languages that have classes. Its a property thats present on all objects (except for some in built functions) and is shared among all instances of an object. Any property or method present on the object that the prototype points to can be accessed by all instances of the object
+* Constructors alone dont eliminate redundancy. In the example above, every instance of Person has the sayName method. Thats where prototypes come in. Proptypes are like classes in languages that have classes. Its a property thats present on all functions (except for some in built functions) and is shared among all instances of an object. Any property or method present on the object that the prototype points to can be accessed by all instances of the object
 ```javascript
 var person = {}
 console.log("hasOwnProperty" in person) // true
 console.log(person.hasOwnProperty("hasOwnProperty")) // false
 console.log(Object.prototype.hasOwnProperty("hasOwnProperty")) // true
 ```
-* An internal property [[Prototype]] keeps track of the prototype for an object isntance
+* An internal property [[Prototype]] keeps track of the prototype for an object instance
 * Use `Object.getPropertyOf` to get the prototype for an object. Essentially `a instanceof B` is true if `Object.getPrototypeOf(a) == B.prototype`. Note that .prototype can be accessed directly on the constructor, not on the instance. On the instance, Object.getPrototypeOf is used
 * The prototype cannot be changed from an instance, they need to be changed from the constructor
 ```javascript
